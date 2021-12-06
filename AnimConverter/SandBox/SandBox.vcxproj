@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{ED602E5D-031C-4AF8-B6A6-4B34E0073B27}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Basics1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.20348.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>CppCoreCheckConstRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;MAYO;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";SOLUTION_DIR=R"($(SolutionDir))";TOOLS_VERSION=R"($(VCToolsVersion))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Framework;$(SolutionDir)Test;$(SolutionDir)JSON;$(SolutionDir)TinyGLTF;$(SolutionDir)Proto;$(SolutionDir)File\include;$(SolutionDir)dist\Math\include</AdditionalIncludeDirectories>
+      <WarningVersion>
+      </WarningVersion>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderOutputFile />
+      <ForcedIncludeFiles>Framework.h;ThreadFramework.h</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <EnablePREfast>false</EnablePREfast>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>Default</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>"$(SolutionDir)Proto\libs\debug\protoc.exe" --cpp_out=. *.proto</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;MAYO;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";SOLUTION_DIR=R"($(SolutionDir))";TOOLS_VERSION=R"($(VCToolsVersion))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Framework;$(SolutionDir)Test;$(SolutionDir)Tools;$(SolutionDir)JSON;$(SolutionDir)TinyGLTF;$(SolutionDir)File\include;$(SolutionDir)Proto</AdditionalIncludeDirectories>
+      <WarningVersion>
+      </WarningVersion>
+      <PrecompiledHeaderOutputFile />
+      <ForcedIncludeFiles>Framework.h;ThreadFramework.h</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\TinyGLTF\tiny_gltf.cc" />
+    <ClCompile Include="animData.cpp" />
+    <ClCompile Include="animData.pb.cc" />
+    <ClCompile Include="boneData.cpp" />
+    <ClCompile Include="boneData.pb.cc" />
+    <ClCompile Include="CreateAnimation.cpp" />
+    <ClCompile Include="CreateTexture.cpp" />
+    <ClCompile Include="GLTF.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="meshData.cpp" />
+    <ClCompile Include="meshData.pb.cc" />
+    <ClCompile Include="meshDataConverter.cpp" />
+    <ClCompile Include="PyramidMesh.cpp" />
+    <ClCompile Include="StringThis.cpp" />
+    <ClCompile Include="textureData.cpp" />
+    <ClCompile Include="textureData.pb.cc" />
+    <ClCompile Include="textureDataConverter.cpp" />
+    <ClCompile Include="vboData.cpp" />
+    <ClCompile Include="vboData.pb.cc" />
+    <ClCompile Include="vboDataConverter.cpp" />
+    <ClInclude Include="..\File\include\File.h" />
+    <ClInclude Include="..\Framework\Framework.h" />
+    <ClInclude Include="..\Framework\ProjectSettings.h" />
+    <ClInclude Include="..\Framework\ThreadFramework.h" />
+    <ClInclude Include="..\JSON\json.hpp" />
+    <ClInclude Include="..\TinyGLTF\stb_image.h" />
+    <ClInclude Include="..\TinyGLTF\stb_image_write.h" />
+    <ClInclude Include="..\TinyGLTF\tiny_gltf.h" />
+    <ClInclude Include="animData.h" />
+    <ClInclude Include="animData.pb.h" />
+    <ClInclude Include="boneData.h" />
+    <ClInclude Include="boneData.pb.h" />
+    <ClInclude Include="BoneMesh.h" />
+    <ClInclude Include="CreateAnimation.h" />
+    <ClInclude Include="CreateTexture.h" />
+    <ClInclude Include="GLTF.h" />
+    <ClInclude Include="md5.h" />
+    <ClInclude Include="meshData.h" />
+    <ClInclude Include="meshData.pb.h" />
+    <ClInclude Include="meshDataConverter.h" />
+    <ClInclude Include="PyramidMesh.h" />
+    <ClInclude Include="StringThis.h" />
+    <ClInclude Include="textureData.h" />
+    <ClInclude Include="textureData.pb.h" />
+    <ClInclude Include="textureDataConverter.h" />
+    <ClInclude Include="vboData.h" />
+    <ClInclude Include="vboData.pb.h" />
+    <ClInclude Include="vboDataConverter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Framework\__DO NOT MODIFY__" />
+    <None Include="..\TinyGLTF\tinygltf.pdb" />
+    <None Include="animData.proto" />
+    <None Include="boneData.proto" />
+    <None Include="meshData.proto" />
+    <None Include="textureData.proto" />
+    <None Include="vboData.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\File\lib\File_X86Debug.lib" />
+    <Library Include="..\File\lib\File_X86Release.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Proto\libs\debug\libprotobuf-lited.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\Proto\libs\release\libprotobuf-lite.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\TinyGLTF\tinygltf.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Math\Math.vcxproj">
+      <Project>{d999076e-f08b-48fc-b732-e43e13041a07}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

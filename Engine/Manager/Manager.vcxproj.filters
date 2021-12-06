@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{62756e66-8839-482b-8326-513973ed48aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ef0c2c44-5809-4283-8e0a-7b0933aad379}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\DLink.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Iterator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ManBase.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DLinkIterator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DLinkMan.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ListBase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DLink.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DLinkIterator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DLinkMan.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ManBase.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Framework\__DO NOT MODIFY__" />
+    <None Include="..\Proto\google\protobuf\compiler\cpp\cpp_unittest.inc" />
+    <None Include="..\Proto\google\protobuf\generated_message_tctable_impl.inc" />
+    <None Include="..\Proto\google\protobuf\map_test_util.inc" />
+    <None Include="..\Proto\google\protobuf\message_unittest.inc" />
+    <None Include="..\Proto\google\protobuf\port_def.inc" />
+    <None Include="..\Proto\google\protobuf\port_undef.inc" />
+    <None Include="..\Proto\google\protobuf\proto3_lite_unittest.inc" />
+    <None Include="..\Proto\google\protobuf\test_util.inc" />
+    <None Include="GLSL\colorRender.fs.glsl" />
+    <None Include="GLSL\colorRender.vs.glsl" />
+    <None Include="GLSL\colorSingleRender.fs.glsl" />
+    <None Include="GLSL\colorSingleRender.vs.glsl" />
+    <None Include="GLSL\constColorRender.fs.glsl" />
+    <None Include="GLSL\constColorRender.vs.glsl" />
+    <None Include="GLSL\nullRender.fs.glsl" />
+    <None Include="GLSL\nullRender.vs.glsl" />
+    <None Include="GLSL\render.fs.glsl" />
+    <None Include="GLSL\render.vs.glsl" />
+    <None Include="GLSL\specLighting.fs.glsl" />
+    <None Include="GLSL\specLighting.vs.glsl" />
+    <None Include="GLSL\texturePointLightDiff.fs.glsl" />
+    <None Include="GLSL\texturePointLightDiff.vs.glsl" />
+    <None Include="GLSL\textureRender.fs.glsl" />
+    <None Include="GLSL\textureRender.vs.glsl" />
+    <None Include="Proto\animData.proto" />
+    <None Include="Proto\boneData.proto" />
+    <None Include="Proto\meshData.proto" />
+    <None Include="Proto\textureData.proto" />
+    <None Include="Proto\vboData.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Framework\Framework.h" />
+    <ClInclude Include="..\Proto\google\protobuf\any.h" />
+    <ClInclude Include="..\Proto\google\protobuf\any.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\api.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\arena.h" />
+    <ClInclude Include="..\Proto\google\protobuf\arenastring.h" />
+    <ClInclude Include="..\Proto\google\protobuf\arena_impl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\arena_test_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\annotation_test_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\code_generator.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\command_line_interface.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_enum.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_enum_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_extension.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_file.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_generator.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_helpers.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_map_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_message.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_message_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_message_layout_helper.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_names.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_options.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_padding_optimizer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_parse_function_generator.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_primitive_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_service.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_string_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\cpp\cpp_unittest.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\importer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\mock_code_generator.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\package_info.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\parser.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\plugin.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\plugin.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\scc.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\subprocess.h" />
+    <ClInclude Include="..\Proto\google\protobuf\compiler\zip_writer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\descriptor.h" />
+    <ClInclude Include="..\Proto\google\protobuf\descriptor.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\descriptor_database.h" />
+    <ClInclude Include="..\Proto\google\protobuf\duration.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\dynamic_message.h" />
+    <ClInclude Include="..\Proto\google\protobuf\empty.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\extension_set.h" />
+    <ClInclude Include="..\Proto\google\protobuf\extension_set_inl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\field_access_listener.h" />
+    <ClInclude Include="..\Proto\google\protobuf\field_mask.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_enum_reflection.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_enum_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_reflection.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_table_driven.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_table_driven_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_tctable_decl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_tctable_impl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\generated_message_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\has_bits.h" />
+    <ClInclude Include="..\Proto\google\protobuf\implicit_weak_message.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\coded_stream.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\gzip_stream.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\io_win32.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\package_info.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\printer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\strtod.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\tokenizer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\zero_copy_stream.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\zero_copy_stream_impl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\io\zero_copy_stream_impl_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_entry.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_entry_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_field_inl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_field_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_lite_test_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_test_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_test_util_impl.h" />
+    <ClInclude Include="..\Proto\google\protobuf\map_type_handler.h" />
+    <ClInclude Include="..\Proto\google\protobuf\message.h" />
+    <ClInclude Include="..\Proto\google\protobuf\message_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\metadata.h" />
+    <ClInclude Include="..\Proto\google\protobuf\metadata_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\package_info.h" />
+    <ClInclude Include="..\Proto\google\protobuf\parse_context.h" />
+    <ClInclude Include="..\Proto\google\protobuf\port.h" />
+    <ClInclude Include="..\Proto\google\protobuf\reflection.h" />
+    <ClInclude Include="..\Proto\google\protobuf\reflection_internal.h" />
+    <ClInclude Include="..\Proto\google\protobuf\reflection_ops.h" />
+    <ClInclude Include="..\Proto\google\protobuf\repeated_field.h" />
+    <ClInclude Include="..\Proto\google\protobuf\service.h" />
+    <ClInclude Include="..\Proto\google\protobuf\source_context.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\struct.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\bytestream.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\callback.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\casts.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\common.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\hash.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\int128.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\logging.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\macros.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\map_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\mathutil.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\mutex.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\once.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\platform_macros.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\port.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\status.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\statusor.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\status_macros.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\stl_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\stringpiece.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\stringprintf.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\strutil.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\substitute.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\template_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\stubs\time.h" />
+    <ClInclude Include="..\Proto\google\protobuf\test_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\test_util2.h" />
+    <ClInclude Include="..\Proto\google\protobuf\test_util_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\text_format.h" />
+    <ClInclude Include="..\Proto\google\protobuf\timestamp.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\type.pb.h" />
+    <ClInclude Include="..\Proto\google\protobuf\unknown_field_set.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\delimited_message_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\field_comparator.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\field_mask_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\constants.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\datapiece.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\default_value_objectwriter.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\error_listener.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\expecting_objectwriter.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\field_mask_utility.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\json_escaping.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\json_objectwriter.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\json_stream_parser.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\location_tracker.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\mock_error_listener.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\object_location_tracker.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\object_source.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\object_writer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\protostream_objectsource.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\protostream_objectwriter.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\proto_writer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\structured_objectwriter.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\type_info.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\type_info_test_helper.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\internal\utility.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\json_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\message_differencer.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\package_info.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\time_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\type_resolver.h" />
+    <ClInclude Include="..\Proto\google\protobuf\util\type_resolver_util.h" />
+    <ClInclude Include="..\Proto\google\protobuf\wire_format.h" />
+    <ClInclude Include="..\Proto\google\protobuf\wire_format_lite.h" />
+    <ClInclude Include="..\Proto\google\protobuf\wrappers.pb.h" />
+    <ClInclude Include="Anim.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="AnimController.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="BoundingSphere.h" />
+    <ClInclude Include="Clip.h" />
+    <ClInclude Include="GameObjectAnim.h" />
+    <ClInclude Include="GameObjectAnimSkeleton.h" />
+    <ClInclude Include="GameObjectAnimSkin.h" />
+    <ClInclude Include="GameObjectBasic.h" />
+    <ClInclude Include="GameObjectBoundingSphere.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraInput.h" />
+    <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="CameraMesh.h" />
+    <ClInclude Include="CameraNode.h" />
+    <ClInclude Include="CubeMesh.h" />
+    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectManager.h" />
+    <ClInclude Include="GameObjectRigid.h" />
+    <ClInclude Include="GraphicsObject.h" />
+    <ClInclude Include="GraphicsObjectHdr.h" />
+    <ClInclude Include="GraphicsObject_ColorByPosition.h" />
+    <ClInclude Include="GraphicsObject_ColorSpecLighting.h" />
+    <ClInclude Include="GraphicsObject_ConstColor.h" />
+    <ClInclude Include="GraphicsObject_FlatTexture.h" />
+    <ClInclude Include="GraphicsObject_Null.h" />
+    <ClInclude Include="GraphicsObject_TextureLight.h" />
+    <ClInclude Include="GraphicsObject_Wireframe.h" />
+    <ClInclude Include="GraphicsObject_WireframeConstantColor.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MeshFileHdr.h" />
+    <ClInclude Include="Mixer.h" />
+    <ClInclude Include="ProtoMeshFactory.h" />
+    <ClInclude Include="MeshNode.h" />
+    <ClInclude Include="MeshNodeManager.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="NullMesh.h" />
+    <ClInclude Include="ProtoBuffMesh.h" />
+    <ClInclude Include="Proto\animData.h" />
+    <ClInclude Include="Proto\animData.pb.h" />
+    <ClInclude Include="Proto\boneData.h" />
+    <ClInclude Include="Proto\boneData.pb.h" />
+    <ClInclude Include="Proto\meshData.h" />
+    <ClInclude Include="Proto\meshData.pb.h" />
+    <ClInclude Include="Proto\textureData.h" />
+    <ClInclude Include="Proto\textureData.pb.h" />
+    <ClInclude Include="Proto\vboData.h" />
+    <ClInclude Include="Proto\vboData.pb.h" />
+    <ClInclude Include="RenderMaterial.h" />
+    <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="ShaderObject.h" />
+    <ClInclude Include="Skeleton.h" />
+    <ClInclude Include="SphereMesh.h" />
+    <ClInclude Include="StringThis.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="textureDataHelper.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TGA.h" />
+    <ClInclude Include="TimerController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\File\File.vcxproj">
+      <Project>{67e2ff08-c99e-4c86-a07a-1b89c13e6fa6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GLFW\GLFW.vcxproj">
+      <Project>{1e4503c4-419b-498d-a9b4-8fdfa7e7733c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Manager\Manager.vcxproj">
+      <Project>{3090a8ea-57f9-4da4-a870-fc9154e9fe46}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Math\Math.vcxproj">
+      <Project>{d999076e-f08b-48fc-b732-e43e13041a07}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SB7\SB7.vcxproj">
+      <Project>{5dbb2b27-956a-4298-9602-e0b606955378}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Time\Time.vcxproj">
+      <Project>{b90c501a-f79b-4b8d-b74f-66f16ddc9bb9}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Anim.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="AnimController.cpp" />
+    <ClCompile Include="Bone.cpp" />
+    <ClCompile Include="BoundingSphere.cpp" />
+    <ClCompile Include="Clip.cpp" />
+    <ClCompile Include="GameObjectAnim.cpp" />
+    <ClCompile Include="GameObjectAnimSkeleton.cpp" />
+    <ClCompile Include="GameObjectAnimSkin.cpp" />
+    <ClCompile Include="GameObjectBasic.cpp" />
+    <ClCompile Include="GameObjectBoundingSphere.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraInput.cpp" />
+    <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="CameraMesh.cpp" />
+    <ClCompile Include="CameraNode.cpp" />
+    <ClCompile Include="CubeMesh.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectManager.cpp" />
+    <ClCompile Include="GameObjectRigid.cpp" />
+    <ClCompile Include="GraphicsObject.cpp" />
+    <ClCompile Include="GraphicsObjectHdr.cpp" />
+    <ClCompile Include="GraphicsObject_ColorByPosition.cpp" />
+    <ClCompile Include="GraphicsObject_ColorSpecLighting.cpp" />
+    <ClCompile Include="GraphicsObject_ConstColor.cpp" />
+    <ClCompile Include="GraphicsObject_FlatTexture.cpp" />
+    <ClCompile Include="GraphicsObject_Null.cpp" />
+    <ClCompile Include="GraphicsObject_TextureLight.cpp" />
+    <ClCompile Include="GraphicsObject_Wireframe.cpp" />
+    <ClCompile Include="GraphicsObject_WireframeConstantColor.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="MeshFileHdr.cpp" />
+    <ClCompile Include="Mixer.cpp" />
+    <ClCompile Include="ProtoMeshFactory.cpp" />
+    <ClCompile Include="MeshNode.cpp" />
+    <ClCompile Include="MeshNodeManager.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="NullMesh.cpp" />
+    <ClCompile Include="ProtoBuffMesh.cpp" />
+    <ClCompile Include="Proto\animData.cpp" />
+    <ClCompile Include="Proto\animData.pb.cc" />
+    <ClCompile Include="Proto\boneData.cpp" />
+    <ClCompile Include="Proto\boneData.pb.cc" />
+    <ClCompile Include="Proto\meshData.cpp" />
+    <ClCompile Include="Proto\meshData.pb.cc" />
+    <ClCompile Include="Proto\textureData.cpp" />
+    <ClCompile Include="Proto\textureData.pb.cc" />
+    <ClCompile Include="Proto\vboData.cpp" />
+    <ClCompile Include="Proto\vboData.pb.cc" />
+    <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="ShaderObject.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
+    <ClCompile Include="SphereMesh.cpp" />
+    <ClCompile Include="StringThis.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="textureDataHelper.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TimerController.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Proto\libs\debug\libprotobuf-lited.lib" />
+    <Library Include="..\Proto\libs\release\libprotobuf-lite.lib" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F378881E-1BCC-4A2A-8E59-85BCBC1B6039}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MathEngineTest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)Debug</TargetName>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)Release</TargetName>
+    <EnableMicrosoftCodeAnalysis>false</EnableMicrosoftCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_GLFW_WIN32;_GLFW_USE_CONFIG_H;ENDO;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";TOOLS_VERSION=R"($(VCToolsVersion))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Framework;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\SB7\include;$(SolutionDir)dist\Math\include;$(SolutionDir)dist\File\include;$(SolutionDir)dist\PCSTree\include;$(SolutionDir)dist\Manager\include;$(ProjectDir);$(SolutionDir)Proto;$(SolutionDir)dist\Time\include;$(SolutionDir)src\Proto</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Framework.h</ForcedIncludeFiles>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;PCSTree_X86Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <PerUserRedirection>true</PerUserRedirection>
+      <AdditionalLibraryDirectories>$(SolutionDir)dist\PCSTree\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy "$(SolutionDir)dist\File\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\GLFW\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\Math\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\PCSTree\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\Time\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\Manager\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\SB7\lib\*" "$(SolutionDir)Debug\*"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;ENDO;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";TOOLS_VERSION=R"($(VCToolsVersion))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(SolutionDir)Framework;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\SB7\include;$(SolutionDir)dist\Math\include;$(SolutionDir)dist\Manager\include;$(SolutionDir)dist\PCSTree\include;$(SolutionDir)dist\File\include;$(ProjectDir)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>Framework.h</ForcedIncludeFiles>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;PCSTree_X86Release.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dist\PCSTree\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+copy "$(SolutionDir)dist\File\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\GLFW\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\Math\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\PCSTree\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\Time\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\SB7\lib\*" "$(SolutionDir)Release\*"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

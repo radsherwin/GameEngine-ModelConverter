@@ -1,0 +1,24 @@
+1) Build once to make dist directory
+
+2) rem rmdir dist in CleanMe.bat
+
+3) Call Sanitize.Bat
+
+4) Add to the prelink
+
+copy "$(SolutionDir)dist\File\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\GLFW\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\Math\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\PCSTree\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\Time\lib\*" "$(SolutionDir)Debug\*"
+copy "$(SolutionDir)\dist\SB7\lib\*" "$(SolutionDir)Debug\*"
+
+
+copy "$(SolutionDir)dist\File\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\GLFW\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\Math\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\PCSTree\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\Time\lib\*" "$(SolutionDir)Release\*"
+copy "$(SolutionDir)\dist\SB7\lib\*" "$(SolutionDir)Release\*"
+
+5) delete the src in each library

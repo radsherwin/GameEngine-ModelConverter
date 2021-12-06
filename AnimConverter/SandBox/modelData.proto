@@ -1,0 +1,24 @@
+//----------------------------------------------------------------------------
+// Copyright 2021, Ed Keenan, all rights reserved.
+//----------------------------------------------------------------------------
+
+syntax = "proto3";
+
+import "vboData.proto";
+import "textureData.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message modelData_proto
+{
+	optional vboData_proto     vbo_vert  = 1;
+	optional vboData_proto     vbo_norm  = 2;
+	optional vboData_proto     vbo_uv  = 3;
+	optional vboData_proto     vbo_trilist  = 4;
+	optional textureData_proto text_color = 5;
+	optional textureData_proto text_normal = 6;
+	optional textureData_proto text_rough = 7;
+
+}
+
+// -- End of File ---

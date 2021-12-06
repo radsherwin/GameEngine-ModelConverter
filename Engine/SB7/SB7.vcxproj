@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\GL\gl3w.h" />
+    <ClInclude Include="include\GL\glcorearb.h" />
+    <ClInclude Include="include\GL\glext.h" />
+    <ClInclude Include="include\GL\glxext.h" />
+    <ClInclude Include="include\GL\wglext.h" />
+    <ClInclude Include="include\object.h" />
+    <ClInclude Include="include\sb6mfile.h" />
+    <ClInclude Include="include\sb7.h" />
+    <ClInclude Include="include\sb7color.h" />
+    <ClInclude Include="include\sb7ext.h" />
+    <ClInclude Include="include\sb7ktx.h" />
+    <ClInclude Include="include\sb7textoverlay.h" />
+    <ClInclude Include="include\shader.h" />
+    <ClInclude Include="include\vmath.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gl3w.c" />
+    <ClCompile Include="src\sb7.cpp" />
+    <ClCompile Include="src\sb7color.cpp" />
+    <ClCompile Include="src\sb7ktx.cpp" />
+    <ClCompile Include="src\sb7object.cpp" />
+    <ClCompile Include="src\sb7shader.cpp" />
+    <ClCompile Include="src\sb7textoverlay.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5DBB2B27-956A-4298-9602-E0B606955378}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PA3</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SB7</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_X86Debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_X86Release</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4201;4514;4668;4710;4711;4588;4587;5045;</DisableSpecificWarnings>
+      <StringPooling>false</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>$(ProjectDir)GLFW\include;$(ProjectDir)include;$(SolutionDir)Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)dist\SB7\lib"
+mkdir "$(SolutionDir)dist\SB7\include"
+mkdir "$(SolutionDir)dist\SB7\include\GL"
+copy "$(SolutionDir)Debug\SB7*.lib" "$(SolutionDir)\dist\SB7\lib\."
+copy "$(SolutionDir)Debug\SB7*.pdb" "$(SolutionDir)dist\SB7\lib\."
+copy "$(ProjectDir)include\*.h" "$(SolutionDir)dist\SB7\include\."
+copy "$(ProjectDir)include\GL\*.h" "$(SolutionDir)dist\SB7\include\GL\."</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4514;4668;4710;4711;4201;4588;4587;5045</DisableSpecificWarnings>
+      <StringPooling>false</StringPooling>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)GLFW\include;$(ProjectDir)include;$(SolutionDir)Framework</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName).lib</OutputFile>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)dist\SB7\lib"
+mkdir "$(SolutionDir)dist\SB7\include"
+mkdir "$(SolutionDir)dist\SB7\include\GL"
+copy "$(SolutionDir)Release\SB7*.lib" "$(SolutionDir)\dist\SB7\lib\."
+copy "$(SolutionDir)Release\SB7*.pdb" "$(SolutionDir)dist\SB7\lib\."
+copy "$(ProjectDir)include\*.h" "$(SolutionDir)dist\SB7\include\."
+copy "$(ProjectDir)include\GL\*.h" "$(SolutionDir)dist\SB7\include\GL\."</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

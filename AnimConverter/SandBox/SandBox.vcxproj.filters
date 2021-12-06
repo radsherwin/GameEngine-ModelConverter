@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="_Framework">
+      <UniqueIdentifier>{f04c9286-e219-4fb7-b306-f9717e9aba86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_JSON">
+      <UniqueIdentifier>{8cc9467e-9038-431b-b912-fb6af76cffe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_TinyGLTF">
+      <UniqueIdentifier>{b08bed67-5f13-4095-b4e5-c1739f6bb48a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Proto">
+      <UniqueIdentifier>{22347e19-8560-4556-9653-625c95963333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_Proto\libs">
+      <UniqueIdentifier>{aab14394-3e71-47d8-9254-0f98de23391e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_File">
+      <UniqueIdentifier>{caabd171-d0a0-4993-afb8-d411aa87cbd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_File\include">
+      <UniqueIdentifier>{161c488b-f340-4be4-b2e3-1668ac4c30b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_File\lib">
+      <UniqueIdentifier>{a3dd5ad2-7191-4ceb-a27a-691c9fcc7c46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TinyGLTF">
+      <UniqueIdentifier>{e75c78dc-7fd8-4f59-b130-4a4fe6483347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto">
+      <UniqueIdentifier>{93aa3e2d-ed70-426d-836e-f3b740665c6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto\MeshData">
+      <UniqueIdentifier>{bb76f898-e7f0-4d8b-a07f-417d7e136bfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto\TextureData">
+      <UniqueIdentifier>{4e5e8136-3959-412c-a46f-d7d5087a7972}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto\VboData">
+      <UniqueIdentifier>{5abe7d54-4c37-4e5e-8ccd-22ba51f52a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CustomMeshes">
+      <UniqueIdentifier>{d525781c-4c8a-43e9-843b-6a255667203c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto\AnimData">
+      <UniqueIdentifier>{870dbb41-ed86-43df-b81d-ce81439b0ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Proto\AnimData\BoneData">
+      <UniqueIdentifier>{a66a4c1b-5298-46b5-b535-204ff2d5c405}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\TinyGLTF\tiny_gltf.cc">
+      <Filter>_TinyGLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="GLTF.cpp">
+      <Filter>Source Files\TinyGLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="meshData.cpp">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClCompile>
+    <ClCompile Include="meshData.pb.cc">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClCompile>
+    <ClCompile Include="textureData.cpp">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClCompile>
+    <ClCompile Include="textureData.pb.cc">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClCompile>
+    <ClCompile Include="vboData.cpp">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClCompile>
+    <ClCompile Include="vboData.pb.cc">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClCompile>
+    <ClCompile Include="vboDataConverter.cpp">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClCompile>
+    <ClCompile Include="textureDataConverter.cpp">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClCompile>
+    <ClCompile Include="meshDataConverter.cpp">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClCompile>
+    <ClCompile Include="md5.cpp">
+      <Filter>Source Files\TinyGLTF</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringThis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateTexture.cpp">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="animData.cpp">
+      <Filter>Source Files\Proto\AnimData</Filter>
+    </ClCompile>
+    <ClCompile Include="animData.pb.cc">
+      <Filter>Source Files\Proto\AnimData</Filter>
+    </ClCompile>
+    <ClCompile Include="boneData.cpp">
+      <Filter>Source Files\Proto\AnimData\BoneData</Filter>
+    </ClCompile>
+    <ClCompile Include="boneData.pb.cc">
+      <Filter>Source Files\Proto\AnimData\BoneData</Filter>
+    </ClCompile>
+    <ClCompile Include="PyramidMesh.cpp">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateAnimation.cpp">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Framework\__DO NOT MODIFY__">
+      <Filter>_Framework</Filter>
+    </None>
+    <None Include="..\TinyGLTF\tinygltf.pdb">
+      <Filter>_TinyGLTF</Filter>
+    </None>
+    <None Include="meshData.proto">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </None>
+    <None Include="textureData.proto">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </None>
+    <None Include="vboData.proto">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </None>
+    <None Include="animData.proto">
+      <Filter>Source Files\Proto\AnimData</Filter>
+    </None>
+    <None Include="boneData.proto">
+      <Filter>Source Files\Proto\AnimData\BoneData</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Framework\Framework.h">
+      <Filter>_Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\ThreadFramework.h">
+      <Filter>_Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TinyGLTF\stb_image.h">
+      <Filter>_TinyGLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TinyGLTF\stb_image_write.h">
+      <Filter>_TinyGLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TinyGLTF\tiny_gltf.h">
+      <Filter>_TinyGLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\JSON\json.hpp">
+      <Filter>_JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Framework\ProjectSettings.h">
+      <Filter>_Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\File\include\File.h">
+      <Filter>_File\include</Filter>
+    </ClInclude>
+    <ClInclude Include="GLTF.h">
+      <Filter>Source Files\TinyGLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="meshData.h">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClInclude>
+    <ClInclude Include="meshData.pb.h">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClInclude>
+    <ClInclude Include="textureData.h">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClInclude>
+    <ClInclude Include="textureData.pb.h">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClInclude>
+    <ClInclude Include="vboData.h">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClInclude>
+    <ClInclude Include="vboData.pb.h">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClInclude>
+    <ClInclude Include="vboDataConverter.h">
+      <Filter>Source Files\Proto\VboData</Filter>
+    </ClInclude>
+    <ClInclude Include="textureDataConverter.h">
+      <Filter>Source Files\Proto\TextureData</Filter>
+    </ClInclude>
+    <ClInclude Include="meshDataConverter.h">
+      <Filter>Source Files\Proto\MeshData</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Source Files\TinyGLTF</Filter>
+    </ClInclude>
+    <ClInclude Include="StringThis.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateTexture.h">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="animData.h">
+      <Filter>Source Files\Proto\AnimData</Filter>
+    </ClInclude>
+    <ClInclude Include="animData.pb.h">
+      <Filter>Source Files\Proto\AnimData</Filter>
+    </ClInclude>
+    <ClInclude Include="boneData.h">
+      <Filter>Source Files\Proto\AnimData\BoneData</Filter>
+    </ClInclude>
+    <ClInclude Include="boneData.pb.h">
+      <Filter>Source Files\Proto\AnimData\BoneData</Filter>
+    </ClInclude>
+    <ClInclude Include="BoneMesh.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PyramidMesh.h">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateAnimation.h">
+      <Filter>Source Files\CustomMeshes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\TinyGLTF\tinygltf.lib">
+      <Filter>_TinyGLTF</Filter>
+    </Library>
+    <Library Include="..\Proto\libs\debug\libprotobuf-lited.lib">
+      <Filter>_Proto\libs</Filter>
+    </Library>
+    <Library Include="..\Proto\libs\release\libprotobuf-lite.lib">
+      <Filter>_Proto\libs</Filter>
+    </Library>
+    <Library Include="..\File\lib\File_X86Debug.lib">
+      <Filter>_File\lib</Filter>
+    </Library>
+    <Library Include="..\File\lib\File_X86Release.lib">
+      <Filter>_File\lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

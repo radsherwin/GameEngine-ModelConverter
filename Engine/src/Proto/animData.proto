@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "boneData.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message animData_proto
+{
+	repeated	boneData_proto	bone_Data			= 1;
+				sint32			parent				= 2;
+				uint32			frameBucketCount	= 3;
+}

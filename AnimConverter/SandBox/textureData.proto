@@ -1,0 +1,91 @@
+//----------------------------------------------------------------------------
+// Copyright 2021, Ed Keenan, all rights reserved.
+//----------------------------------------------------------------------------
+
+syntax = "proto3";
+
+option optimize_for = LITE_RUNTIME;
+
+message textureData_proto
+{
+
+	enum TEXTURE_EFORMAT
+	{
+		EFORMAT_BGR = 0;
+		EFORMAT_RGB = 1;
+		EFORMAT_RGBA = 2;
+	};
+
+	enum TEXTURE_NCOMPONENT
+	{
+		NCOMPONENT_BGR = 0;
+		NCOMPONENT_RGB = 1;
+		NCOMPONENT_RGBA = 2;
+	};
+
+	enum TEXTURE_TYPE
+	{
+		JPEG = 0;
+		PNG = 1;
+		BMP = 2;
+		GIF = 3;
+	};
+
+	enum TEXTURE_MAG_FILTER
+	{
+		MAG_NEAREST = 0;
+		MAG_LINEAR = 1;
+	};
+
+	enum TEXTURE_MIN_FILTER
+	{
+		MIN_NEAREST = 0;
+		MIN_LINEAR = 1;
+		MIN_NEAREST_MIPMAP_NEAREST = 2;
+		MIN_LINEAR_MIPMAP_NEAREST = 3;
+		MIN_NEAREST_MIPMAP_LINEAR = 4;
+		MIN_LINEAR_MIPMAP_LINEAR = 5;
+	};
+
+	enum TEXTURE_WRAP
+	{
+		WRAP_CLAMP_TO_EDGE = 0;
+		WRAP_MIRRORED_REPEAT = 1;
+		WRAP_REPEAT = 2;
+	};
+
+	enum TEXTURE_PIXEL_TYPE
+	{
+		BYTE = 0;
+		UNSIGNED_BYTE = 1;
+		SHORT = 2;
+		UNSIGNED_SHORT = 3;
+		INT = 4;
+		UNSIGNED_INT = 5;
+		FLOAT = 6;
+		DOUBLE = 7;
+	};
+
+	uint32				enabled		 = 1;
+	TEXTURE_TYPE        textType     = 2;
+	TEXTURE_MAG_FILTER  magFilter    = 3;
+	TEXTURE_MIN_FILTER  minFilter    = 4;
+	TEXTURE_WRAP        wrapS        = 5;
+	TEXTURE_WRAP        wrapT        = 6;
+	TEXTURE_PIXEL_TYPE	pixel_type	 = 7;
+	TEXTURE_EFORMAT		eFormat		 = 8;
+	TEXTURE_NCOMPONENT	nComponent	 = 9;
+	uint32				width		 = 10;
+	uint32				height		 = 11;
+	uint32				component	 = 12;
+	uint32				bits		 = 13;
+	uint32				as_is		 = 14;
+	uint32              fileNameSize = 15;
+	bytes               fileNameData = 16;
+	uint32              dataSize     = 17;
+	uint32				hash		 = 18;
+	bytes               poData       = 19;
+
+}
+
+// -- End of File ---
